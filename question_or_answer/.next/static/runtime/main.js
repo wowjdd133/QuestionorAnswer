@@ -6187,7 +6187,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      (0, _sourceMapSupport.rewriteStacktrace)(error, "C:\\Users\\user\\Desktop\\react\\question_or_answer\\.next");
+      (0, _sourceMapSupport.rewriteStacktrace)(error, "C:\\Users\\user\\Documents\\GitHub\\QuestionorAnswer\\question_or_answer\\.next");
       return error;
     }
   };

@@ -1,22 +1,16 @@
-import Layout from '../components/Layout'
+import React , {Fragment} from 'react';
 import Router from 'next/Router';
+import Title from '../components/Title';
 
-const Title = () => {
+const TitlePage = () => {
   return (
-    <Layout>
+    <Fragment>
       <h1>What's your question title?</h1>
       <p>Your title helps people quickly understand what your question is about so they can answer it.</p>
       <p className="input-title">Title</p>
-      <input type="text" placeholder="What's your question?"/>
-      <button onClick={() => 
-        Router.back()}>Back</button>
-      <button onClick={() =>{
-        Router.push('/description')
-      }
-        
-      }> Next </button>
-    </Layout>
+      <Title/>
+    </Fragment>
   )
 }
 
-export default Title;
+export default TitlePage;

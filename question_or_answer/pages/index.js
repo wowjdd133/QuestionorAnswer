@@ -1,22 +1,19 @@
-import React from 'react';
-import Layout from '../components/Layout';
+import React, {Fragment} from 'react';
 import Router from 'next/Router';
-import QuestionStore from '../stores/questionStore';
-import { Provider } from 'mobx-react';
 
-const question = new QuestionStore();
 
 const Index = () => {
+  
+  const handleNext = () => {
+    Router.push('/tag');
+  }
+
   return (
-    <Provider question={question}>
-      <Layout>
-        <button onClick={() => {
-        Router.push('/tag');
-        }}>Ask Question</button>
-        <h1>Hello index</h1>
-      </Layout>
-    </Provider>
-    );
+    <Fragment>
+      <button onClick={handleNext}>Ask Question</button>
+      <h1>Hello index</h1>
+    </Fragment>
+  );
 };
 
 export default Index;

@@ -1,20 +1,15 @@
-import React from 'react';
-import Router from 'next/Router';
-import Layout from "../components/Layout";
+import React , {Fragment} from 'react';
+import Description from '../components/Description';
+import {inject, observer} from 'mobx-react';
 
-const Description = () => {
+const DescriptionPage = ({store}) => {
   return (
-    <Layout>
+    <Fragment>
       <h1>Tell us more about your question</h1>
       <p>description</p>
-      <textarea className= "description-textarea" style={{ width: 300, height: 400}}>
-
-      </textarea>
-      <button onClick={() => 
-        Router.back()}>Back</button>
-      <button onClick={() => Router.push('/')}>done</button>
-    </Layout>
+      <Description store={store}/>
+    </Fragment>
   );
 };
 
-export default Description;
+export default inject('store')(observer(DescriptionPage));
