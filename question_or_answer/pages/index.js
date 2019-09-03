@@ -11,7 +11,7 @@ const Index = () => {
   return (
     <Fragment>
       <button onClick={handleNext}>Ask Question</button>
-      <h1>Hello index</h1>
+      <h1>재미있는 코딩 놀이</h1>
     </Fragment>
   );
 };

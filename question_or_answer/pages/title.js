@@ -1,6 +1,5 @@
 import React , {Fragment} from 'react';
-import Router from 'next/Router';
-import Title from '../components/Title';
+import Title from '../components/ask/Title';
 
 const TitlePage = () => {
   return (

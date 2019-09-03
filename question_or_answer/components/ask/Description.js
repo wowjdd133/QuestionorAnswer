@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import Router from 'next/router';
 
 const Description = ({ store }) => {
-  console.log(store.question);
   const [description, setDescription] = useState("");
 
   const putQuestion = () => {
@@ -16,19 +15,17 @@ const Description = ({ store }) => {
   }
 
   const handleChange = e => {
-    console.log(e.target.value);
     setDescription(e.target.value)
   };
   
   const handleDone = () => {
     putQuestion();
-    setTimeout(5000);
-    getQuestion();
+    store.question.getQuestion();
     Router.push('/');
   }
 
   const getQuestion = () => {
-    console.log(store.question.questions);
+    console.log(store.question.questions[0]);
   }
 
   const handleBack = () => {
