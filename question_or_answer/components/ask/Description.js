@@ -10,6 +10,8 @@ const Description = ({ store }) => {
         tag: localStorage.getItem('tag'),
         title: localStorage.getItem('title'),
         description: description,
+        view: 0,
+        answers: 0,
       }
     )
   }
@@ -20,12 +22,7 @@ const Description = ({ store }) => {
   
   const handleDone = () => {
     putQuestion();
-    store.question.getQuestion();
     Router.push('/');
-  }
-
-  const getQuestion = () => {
-    console.log(store.question.questions[0]);
   }
 
   const handleBack = () => {
